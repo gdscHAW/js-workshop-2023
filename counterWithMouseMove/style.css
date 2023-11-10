@@ -1,0 +1,35 @@
+:root {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+
+  height: 100vh;
+
+  background: linear-gradient(
+    to top,
+    #1e1b4b 0%,
+    #1e1b4b 50%,
+    #10b981 50%,
+    #10b981 100%
+  );
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.count-container {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-size: 40px;
+}

@@ -1,0 +1,38 @@
+:root {
+  background-color: #242424;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.count-container {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-size: 40px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 7px;
+
+  border: none;
+  outline: none;
+  background-color: palegreen;
+  color: olivedrab;
+
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -12,32 +12,33 @@ class TodoItem extends HTMLElement {
     shadow.append(templateTodoItem.content.cloneNode(true));
 
     this.todoId = this.getAttribute("todo-id");
-
     this.checkbox = shadow.querySelector("input");
+
     this.initEventListeners();
-    this.getTodoInitialState();
   }
 
   initEventListeners() {
-    this.checkbox.addEventListener("change", () => this.updateTodo());
+    this.onChange = new CustomEvent("onChange", {
+      bubbles: true,
+      cancelable: false,
+      composed: true,
+    });
+
+    this.checkbox.addEventListener("change", () => {
+      this.dispatchEvent(this.onChange);
+    });
   }
 
-  updateTodo() {
-    const todo = sessionStorage.getItem(this.todoId);
-    if (!todo) {
-      sessionStorage.setItem(this.todoId, true);
-      return;
+  static get observedAttributes() {
+    return ["checked"];
+  }
+
+  // Lifecycle Callback
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === "checked" && newValue !== null) {
+      const value = newValue === "true";
+      this.checkbox.checked = value;
     }
-
-    const value = todo === "true";
-    sessionStorage.setItem(this.todoId, !value);
-  }
-
-  getTodoInitialState() {
-    const todo = sessionStorage.getItem(this.todoId);
-    if (!todo) return;
-    const value = todo === "true";
-    this.checkbox.checked = value;
   }
 }
 

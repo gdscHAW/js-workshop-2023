@@ -23,21 +23,16 @@ class TodoItem extends HTMLElement {
   }
 
   updateTodo() {
-    const todo = sessionStorage.getItem(this.todoId);
-    if (!todo) {
-      sessionStorage.setItem(this.todoId, true);
-      return;
-    }
-
-    const value = todo === "true";
-    sessionStorage.setItem(this.todoId, !value);
+    const currentValue = this.checkbox.checked;
+    sessionStorage.setItem(this.todoId, currentValue);
   }
 
   getTodoInitialState() {
     const todo = sessionStorage.getItem(this.todoId);
-    if (!todo) return;
-    const value = todo === "true";
-    this.checkbox.checked = value;
+    if (todo !== null) {
+      const isCheckboxChecked = todo === 'true';
+      this.checkbox.checked = isCheckboxChecked;
+    }
   }
 }
 

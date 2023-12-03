@@ -10,6 +10,7 @@
 - https://youtu.be/K74l26pE4YA?si=QgVh7d_mcBi0xVP1
 - https://youtu.be/uuOXPWCh-6o?si=XNpYrO_5f6j-SNSz
 - https://youtu.be/Qhaz36TZG5Y?si=gpAOB_1PJ7v4qxaK
+- https://www.w3schools.com/css/
 
 ## JavaScript
 

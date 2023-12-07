@@ -11,12 +11,32 @@ The save should happen when the checkbox is clicked.
 
 ## Useful functions
 
+### Creates a new element in the DOM
 ```js
-document.createElement("typeOfElement"); // creates a new element in the DOM
-getAttribute("nameOfTheAttributeOnTheElement"); // gets the value of an attribute of an element
-querySelector("nameOfTheElement"); // gets the first element which matches the given selector
-addEventListener("nameOfTheEvent", () { console.log("something happend here") }); // adds an event listener to an element
-sessionStorage.setItem("nameOfTheItem", "valueOfTheItem"); // saves an item in the session storage
-sessionStorage.getItem("nameOfTheItem"); // gets an item from the session storage
+document.createElement("typeOfElement"); 
+```
+
+### Gets the value of an attribute of an element
+```js
+getAttribute("nameOfTheAttributeOnTheElement");
+```
+### Gets the first element which matches the given selector
+```js
+querySelector("nameOfTheElement");
+```
+
+### Adds an event listener to an element
+```js
+addEventListener("nameOfTheEvent", () { console.log("something happend here") });
+```
+
+### Saves an item in the session storage
+```js
+sessionStorage.setItem("nameOfTheItem", "valueOfTheItem");
+```
+
+### Gets an item from the session storage
+```js
+sessionStorage.getItem("nameOfTheItem");
 ```
 
